@@ -7,11 +7,11 @@ namespace Task1
 {
     public static class FileExtensions
     {
-        public static Product[] GetProducts(string ReadFile)
+        public static Product[] GetProducts(string filePath)
         {
             try
             {
-                using (var reader = new StreamReader($@"..\..\..\{ReadFile}"))
+                using (var reader = new StreamReader($@"..\..\..\{filePath}"))
                 {
                     using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
                     {
@@ -28,11 +28,11 @@ namespace Task1
             }
         }
 
-        public static Storage[] GetStorage(string ReadFile)
+        public static Storage[] GetStorage(string filePath)
         {
             try
             {
-                using (var reader = new StreamReader($@"..\..\..\{ReadFile}"))
+                using (var reader = new StreamReader($@"..\..\..\{filePath}"))
                 {
                     using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
                     {
