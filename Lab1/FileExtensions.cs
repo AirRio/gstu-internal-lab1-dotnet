@@ -11,7 +11,7 @@ namespace Task1
         {
             try
             {
-                using (var reader = new StreamReader($@"..\..\..\{filePath}"))
+                using (var reader = new StreamReader(filePath))
                 {
                     using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
                     {
@@ -32,7 +32,7 @@ namespace Task1
         {
             try
             {
-                using (var reader = new StreamReader($@"..\..\..\{filePath}"))
+                using (var reader = new StreamReader(filePath))
                 {
                     using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
                     {
